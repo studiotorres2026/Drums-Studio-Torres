@@ -1,0 +1,26 @@
+name: Build Windows VST3
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: windows-2022
+
+    steps:
+      - name: Download project
+        uses: actions/checkout@v4
+
+      - name: Configure project
+        run: cmake -S . -B build -A x64
+
+      - name: Compile plugin
+        run: cmake --build build --config Release --target DrumsStudioTorres_VST3
+
+      - name: Save VST3
+        uses: actions/upload-artifact@v4
+        with:
+          name: Drums-Studio-Torres-VST3
+          path: build/DrumsStudioTorres_artefacts/Release/VST3/
