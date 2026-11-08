@@ -1,0 +1,17 @@
+GUIA PARA TRABAJAR DESDE ANDROID
+
+1. Abre Chrome y entra en https://github.com
+2. Crea una cuenta o inicia sesión.
+3. Crea un repositorio nuevo llamado Drums-Studio-Torres.
+4. Para subir el proyecto, usa Add file > Upload files desde la página del repositorio.
+5. Sube el contenido del ZIP (no el ZIP como un único archivo): CMakeLists.txt, la carpeta Source y la carpeta .github.
+6. Confirma el commit en la rama main.
+7. Abre la pestaña Actions del repositorio.
+8. Selecciona "Build Windows VST3" y pulsa Run workflow.
+9. Si la compilación termina correctamente, abre la ejecución y descarga el artefacto "Drums-Studio-Torres-Windows-VST3".
+
+IMPORTANTE:
+- Este workflow es una configuración inicial de compilación, no una garantía de que el prototipo compile sin correcciones.
+- El código actual es experimental y aún no es un instrumento terminado: falta integrar la carga WAV desde la interfaz, mixer gráfico, guardado de kits y pruebas de ruteo.
+- GitHub Actions tiene límites de uso según el tipo de cuenta y repositorio.
+- No publiques archivos WAV privados ni credenciales en el repositorio.
